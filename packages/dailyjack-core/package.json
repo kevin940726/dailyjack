@@ -1,0 +1,8 @@
+{
+  "name": "dailyjack-core",
+  "version": "0.1.1",
+  "description": "dailyjack core database",
+  "main": "index.js",
+  "author": "Kai Hao",
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "dailyjack-api",
+  "version": "0.1.0",
+  "description": "dailyjack api",
+  "main": "index.js",
+  "url": "https://mpeoxufygg.execute-api.ap-northeast-1.amazonaws.com/latest/",
+  "author": "Kai Hao",
+  "license": "MIT",
+  "dependencies": {
+    "claudia-api-builder": "^2.5.1",
+    "dailyjack-core": "file:../dailyjack-core"
+  },
+  "scripts": {
+    "deploy": "AWS_PROFILE=claudia claudia update --api-module index"
+  }
+}

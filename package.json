@@ -1,0 +1,18 @@
+{
+  "name": "dailyjack",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kevin940726/dailyjack.git"
+  },
+  "devDependencies": {
+    "@17media/eslint-config-17media": "^1.1.0",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^6.10.3",
+    "lerna": "^2.0.0"
+  },
+  "scripts": {
+    "bootstrap": "lerna exec -- linklocal && lerna bootstrap"
+  }
+}

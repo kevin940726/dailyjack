@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "dailyjack-api-executor",
+    "name": "dailyjack-api",
+    "region": "ap-northeast-1"
+  },
+  "api": {
+    "id": "mpeoxufygg",
+    "module": "index"
+  }
+}
