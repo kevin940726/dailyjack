@@ -5,4 +5,5 @@ module.exports = {
   all: () => jacks,
   random: () => jacks[Math.floor(Math.random() * jacks.length)],
   get: id => jacks[id - 1],
+  size: () => jacks.length,
 };

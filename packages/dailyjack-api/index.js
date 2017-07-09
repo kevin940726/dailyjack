@@ -15,9 +15,9 @@ const slackMessageBuilder = (...jacks) => ({
   response_type: 'in_channel',
   attachments: jacks.map(jack => ({
     title: jack.title,
-    text: jack.contents.join('\n'),
+    text: (jack.contents || []).join('\n'),
     footer: `dailyjack #${jack.id}`,
-    footer_icon: ':jack-see-you:',
+    footer_icon: 'http://i.imgur.com/19yCcOJ.jpg',
   })),
 });
 
