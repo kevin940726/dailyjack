@@ -12,6 +12,7 @@
     "dailyjack-core": "file:../dailyjack-core"
   },
   "scripts": {
-    "deploy": "AWS_PROFILE=claudia claudia update --api-module index"
+    "deploy": "AWS_PROFILE=claudia claudia update --api-module index",
+    "deploy:dev": "npm run deploy -- --version dev"
   }
 }
