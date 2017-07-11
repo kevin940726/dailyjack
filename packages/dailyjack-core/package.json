@@ -4,5 +4,12 @@
   "description": "dailyjack core database",
   "main": "index.js",
   "author": "Kai Hao",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "firebase-admin": "^5.0.0"
+  },
+  "scripts": {
+    "bootstrap": "node bootstrap.js"
+  }
 }
