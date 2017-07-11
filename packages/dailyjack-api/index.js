@@ -1,6 +1,19 @@
 /* eslint-disable camelcase */
 const ApiBuilder = require('claudia-api-builder');
-const dailyjack = require('dailyjack-core');
+const dailyjackCore = require('dailyjack-core').default;
+require('dotenv').config();
+
+const {
+  FIREBASE_PROJECT_ID,
+  FIREBASE_CLIENT_EMAIL,
+  FIREBASE_PRIVATE_KEY,
+} = process.env;
+
+const dailyjack = dailyjackCore({
+  projectId: FIREBASE_PROJECT_ID,
+  clientEmail: FIREBASE_CLIENT_EMAIL,
+  privateKey: FIREBASE_PRIVATE_KEY,
+});
 
 const api = new ApiBuilder();
 
