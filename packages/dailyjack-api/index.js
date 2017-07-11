@@ -40,6 +40,10 @@ const slackMessageBuilder = (...jacks) => ({
 api.post('/slack', (request) => {
   const body = request.post;
 
+  if (body.channel_name.indexOf('all-') === 0) {
+    return;
+  }
+  
   if (body.text === 'all') {
     return slackMessageBuilder(...dailyjack.all());
   }
