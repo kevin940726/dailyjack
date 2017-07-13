@@ -8,11 +8,15 @@ const {
   FIREBASE_PRIVATE_KEY,
 } = env || process.env;
 
-const jacks = jackDB({
+const dailyjack = jackDB({
   projectId: FIREBASE_PROJECT_ID,
   clientEmail: FIREBASE_CLIENT_EMAIL,
   privateKey: FIREBASE_PRIVATE_KEY,
 });
 
-Promise.all(dataset.map(jack => jacks.insert(jack)))
+dailyjack.all()
+  .then(jacks => Promise.all(
+    dataset.slice(jacks.length)
+      .map(jack => dailyjack.insert(jack))
+  ))
   .then(() => process.exit());
