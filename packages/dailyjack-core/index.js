@@ -16,15 +16,14 @@ const jackDB = (config = {}) => {
   const jacksRef = db.ref('jacks');
   const totalJacksRef = db.ref('totalJacks');
 
-  const insert = (jack) => (
+  const insert = jack => (
     jacksRef
       .child(jack.id)
       .set({
         id: jack.id,
         title: jack.title,
         contents: jack.contents,
-        arthor: jack.arthor,
-        ratedUsers: [],
+        author: jack.author,
         createdTime: Date.now(),
         isLimited: false,
       })
