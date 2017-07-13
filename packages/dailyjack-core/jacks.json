@@ -4,14 +4,16 @@
     "title": "有一次，分號檢查它的 code，查了一天才發現其中一行少了一個 Jack",
     "contents": [
       "現在有 `eslint` 很方便，但我們也要注意每行結尾有沒有依規定加 Jack"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "2",
     "title": "在 Jack 進入 17 之前，17 有好幾位優秀的工程師；Jack 進入 17 之後，只剩一位",
     "contents": [
       "那一位就是 Jack，他的優秀讓其他人相形之下一如庸才"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "3",
@@ -19,28 +21,32 @@
     "contents": [
       "Jack 存在於所有存在之前",
       "而且 Jack 一定有管理員權限"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "4",
     "title": "有一次 Jack 騎機車撞上一台計程車",
     "contents": [
       "計程車的殘骸目前還沒尋齊"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "5",
     "title": "如果你在 select 裡面的 option 中指定 value 為 Jack，這個 option 會自動 disabled",
     "contents": [
       "你無法選擇 Jack，是 Jack 選擇你"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "6",
     "title": "當 Jack 活動出包的時候，老闆會打電話給 Jack",
     "contents": [
       "向 Jack 道歉"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "7",
@@ -48,21 +54,24 @@
     "contents": [
       "該分支不會出現什麼問題，但其他所有分支都會被 squash",
       "你也無法再用 checkout 選擇 Jack 分支，因為是 Jack 選擇你"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "8",
     "title": "當 Jack 被關在電梯裡面",
     "contents": [
       "實際上是我們所有人被關在電梯外面"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "9",
     "title": "當 Jack 購買 Swag 妹子圖片時",
     "contents": [
       "妹子必須支付點數給 Jack"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "10",
@@ -70,7 +79,8 @@
     "contents": [
       "向主管道謝",
       "感謝你讓我們有這份榮幸認識了 Jack"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "11",
@@ -78,14 +88,16 @@
     "contents": [
       "但遞到 Jack 手上時，變成了原萃烏龍茶",
       "因為上班時間不好喝酒，因此以茶代酒，這就是 Jack 的貼心"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "12",
     "title": "當你在程式中宣告 `{jack:'almighty'}` 的時候",
     "contents": [
       "`eslint` 會自動幫你在 jack 前面加上空格，這代表了尊敬，沒有加的話視為 error"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "13",
@@ -93,28 +105,32 @@
     "contents": [
       "搜尋結果一定會有: `永遠是我們最愛的 Jack`",
       "因為 Jack 永遠是我們的最愛"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "14",
     "title": "Jack 是不離職的，當他覺得一份工作已經沒有挑戰性時",
     "contents": [
       "是公司要解散"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "15",
     "title": "Jack 上健身房健身之後",
     "contents": [
       "健身器材被鍛鍊的更強壯了"
-    ]
+    ],
+    "arthor": "scars"
   },
   {
     "id": "16",
     "title": "其實 Jack 三個月前就被炒魷魚了",
     "contents": [
       "只是老闆一直到現在還沒辦法鼓起勇氣告訴他"
-    ]
+    ],
+    "arthor": "hsuan"
   },
   {
     "id": "17",
@@ -122,21 +138,24 @@
     "contents": [
       "那是因為 Jack 在看的時候 bug 不敢出來亂",
       "其他人執行的時候 bug 就囂張了"
-    ]
+    ],
+    "arthor": "hsuan"
   },
   {
     "id": "18",
     "title": "第六天， Jack 覺得有點孤單",
     "contents": [
       "上帝就照著 Jack 的形象造了人"
-    ]
+    ],
+    "arthor": "hsuan"
   },
   {
     "id": "19",
     "title": "Jack 的電腦不需要插電",
     "contents": [
       "它會運作，是出於對 Jack 的尊敬"
-    ]
+    ],
+    "arthor": "hsuan"
   },
   {
     "id": "20",
@@ -144,6 +163,7 @@
     "contents": [
       "下一秒，他會笑著看著你",
       "你會對你剛從口中說出的東西感到後悔"
-    ]
+    ],
+    "arthor": "jasper"
   }
 ]
