@@ -5,7 +5,7 @@
     "contents": [
       "現在有 `eslint` 很方便，但我們也要注意每行結尾有沒有依規定加 Jack"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "2",
@@ -13,7 +13,7 @@
     "contents": [
       "那一位就是 Jack，他的優秀讓其他人相形之下一如庸才"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "3",
@@ -22,7 +22,7 @@
       "Jack 存在於所有存在之前",
       "而且 Jack 一定有管理員權限"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "4",
@@ -30,7 +30,7 @@
     "contents": [
       "計程車的殘骸目前還沒尋齊"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "5",
@@ -38,7 +38,7 @@
     "contents": [
       "你無法選擇 Jack，是 Jack 選擇你"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "6",
@@ -46,7 +46,7 @@
     "contents": [
       "向 Jack 道歉"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "7",
@@ -55,7 +55,7 @@
       "該分支不會出現什麼問題，但其他所有分支都會被 squash",
       "你也無法再用 checkout 選擇 Jack 分支，因為是 Jack 選擇你"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "8",
@@ -63,7 +63,7 @@
     "contents": [
       "實際上是我們所有人被關在電梯外面"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "9",
@@ -71,7 +71,7 @@
     "contents": [
       "妹子必須支付點數給 Jack"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "10",
@@ -80,7 +80,7 @@
       "向主管道謝",
       "感謝你讓我們有這份榮幸認識了 Jack"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "11",
@@ -89,7 +89,7 @@
       "但遞到 Jack 手上時，變成了原萃烏龍茶",
       "因為上班時間不好喝酒，因此以茶代酒，這就是 Jack 的貼心"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "12",
@@ -97,7 +97,7 @@
     "contents": [
       "`eslint` 會自動幫你在 jack 前面加上空格，這代表了尊敬，沒有加的話視為 error"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "13",
@@ -106,7 +106,7 @@
       "搜尋結果一定會有: `永遠是我們最愛的 Jack`",
       "因為 Jack 永遠是我們的最愛"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "14",
@@ -114,7 +114,7 @@
     "contents": [
       "是公司要解散"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "15",
@@ -122,7 +122,7 @@
     "contents": [
       "健身器材被鍛鍊的更強壯了"
     ],
-    "arthor": "scars"
+    "author": "scars"
   },
   {
     "id": "16",
@@ -130,7 +130,7 @@
     "contents": [
       "只是老闆一直到現在還沒辦法鼓起勇氣告訴他"
     ],
-    "arthor": "hsuan"
+    "author": "hsuan"
   },
   {
     "id": "17",
@@ -139,7 +139,7 @@
       "那是因為 Jack 在看的時候 bug 不敢出來亂",
       "其他人執行的時候 bug 就囂張了"
     ],
-    "arthor": "hsuan"
+    "author": "hsuan"
   },
   {
     "id": "18",
@@ -147,7 +147,7 @@
     "contents": [
       "上帝就照著 Jack 的形象造了人"
     ],
-    "arthor": "hsuan"
+    "author": "hsuan"
   },
   {
     "id": "19",
@@ -155,7 +155,7 @@
     "contents": [
       "它會運作，是出於對 Jack 的尊敬"
     ],
-    "arthor": "hsuan"
+    "author": "hsuan"
   },
   {
     "id": "20",
@@ -164,6 +164,22 @@
       "下一秒，他會笑著看著你",
       "你會對你剛從口中說出的東西感到後悔"
     ],
-    "arthor": "jasper"
+    "author": "jasper"
+  },
+  {
+    "id": "21",
+    "title": "當你凝視著 Jack 的時候，Jack 也在凝視著你",
+    "contents": [
+      "當你沒有凝視著 Jack 的時候，Jack 還在凝視著你"
+    ],
+    "author": "scars"
+  },
+  {
+    "id": "22",
+    "title": "有個人在飛機上遇到 Jack 而向他請安，「Hi Jack!」",
+    "contents": [
+      "這個人就被逮捕了，只怪他在 Jack 前面加的空格不夠"
+    ],
+    "author": "scars"
   }
 ]
