@@ -1,6 +1,6 @@
 {
   "name": "dailyjack-core",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "dailyjack core database",
   "main": "index.js",
   "author": "Kai Hao",
