@@ -1,0 +1,36 @@
+machine:
+  timezone:
+    Asia/Taipei
+  services:
+    - docker
+  node:
+    version: 6.10.3
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+general:
+  artifacts:
+    - "coverage"
+
+dependencies:
+  pre:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+    - echo "{ \"FIREBASE_PROJECT_ID\":\"$FIREBASE_PROJECT_ID\", \"FIREBASE_CLIENT_EMAIL\":\"$FIREBASE_CLIENT_EMAIL\", \"FIREBASE_PRIVATE_KEY\":\"$FIREBASE_PRIVATE_KEY\" }" > ./.env.json
+  override:
+    - yarn global add lerna
+    - yarn
+    - lerna bootstrap
+  cache_directories:
+    - ~/.cache/yarn
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - lerna run deploy:dev -- --use-local-dependencies
+  prod:
+    branch: master
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - lerna run deploy:prod -- --use-local-dependencies
+      - npm publish

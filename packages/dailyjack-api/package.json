@@ -9,12 +9,15 @@
   "license": "MIT",
   "dependencies": {
     "claudia-api-builder": "^2.5.1",
-    "dailyjack-core": "file:../dailyjack-core",
+    "dailyjack-core": "^1.0.2",
     "dotenv": "^4.0.0"
   },
   "scripts": {
     "deploy": "AWS_PROFILE=claudia claudia update --api-module index --set-env-from-json ../../.env.json",
     "deploy:prod": "npm run deploy -- --version prod",
     "deploy:dev": "npm run deploy -- --version dev"
+  },
+  "devDependencies": {
+    "claudia": "^2.14.1"
   }
 }
