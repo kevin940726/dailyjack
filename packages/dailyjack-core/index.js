@@ -1,6 +1,6 @@
 const admin = require('firebase-admin');
 
-const DATABASE_URL = 'https://dailyjack-8a930.firebaseio.com';
+const DATABASE_URL = process.env.DATABASE_URL || 'https://dailyjack-8a930.firebaseio.com';
 
 const jackDB = (config = {}) => {
   const app = admin.initializeApp({
@@ -35,7 +35,7 @@ const jackDB = (config = {}) => {
   const all = () => (
     jacksRef.once('value')
       .then(snapshot => snapshot.val())
-      .then(jacks => jacks.filter(Boolean))
+      .then(jacks => (jacks || []).filter(Boolean))
   );
 
   const get = id => (
