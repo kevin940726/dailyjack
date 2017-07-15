@@ -38,10 +38,11 @@ const jackDB = (config = {}) => {
       && (!filterOptions.shouldExcludeSpecial || !jack.isSpecial)
   );
 
-  const all = () => (
+  const all = (filterOptions = {}) => (
     jacksRef.once('value')
       .then(snapshot => snapshot.val())
       .then(jacks => (jacks || []).filter(Boolean))
+      .then(jacks => filter(jacks, filterOptions))
   );
 
   const get = id => (
@@ -51,8 +52,7 @@ const jackDB = (config = {}) => {
   );
 
   const random = (filterOptions = {}) => (
-    all()
-      .then(jacks => filter(jacks, filterOptions))
+    all(filterOptions)
       .then(jacks => jacks[Math.floor(Math.random() * jacks.length)])
   );
 
