@@ -30,7 +30,7 @@ deployment:
       - lerna run deploy:dev -- --use-local-dependencies
   prod:
     branch: master
-    tag: /v[0-9]+(\.[0-9]+)*/
+    tag: /[\w-]+@[0-9]+(\.[0-9]+)*/
     commands:
       - lerna run deploy:prod -- --use-local-dependencies
       - npm publish
