@@ -47,14 +47,10 @@ const slackMessageBuilder = (...jacks) => ({
 
 api.post('/slack', (request) => {
   const body = request.post;
+  const filterOptions = {};
 
   if (body.channel_name.indexOf('all-') === 0) {
-    return;
-  }
-
-  if (body.text === 'all') {
-    return dailyjack.all()
-      .then(all => slackMessageBuilder(...all));
+    filterOptions.shouldExcludeLimited = true;
   }
 
   const id = parseInt(body.text, 10);
@@ -63,7 +59,7 @@ api.post('/slack', (request) => {
       .then(slackMessageBuilder);
   }
 
-  return dailyjack.random()
+  return dailyjack.random(filterOptions)
     .then(slackMessageBuilder);
 });
 

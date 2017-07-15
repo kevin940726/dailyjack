@@ -25,11 +25,17 @@ const jackDB = (config = {}) => {
         contents: jack.contents,
         author: jack.author,
         createdTime: Date.now(),
-        isLimited: false,
+        isLimited: Boolean(jack.isLimited),
+        isSpecial: Boolean(jack.isSpecial),
       })
       .then(() => (
         totalJacksRef.transaction(total => (total || 0) + 1)
       ))
+  );
+
+  const filter = (jacks = [], filterOptions = {}) => jacks.filter(
+    jack => (!filterOptions.shouldExcludeLimited || !jack.isLimited)
+      && (!filterOptions.shouldExcludeSpecial || !jack.isSpecial)
   );
 
   const all = () => (
@@ -44,10 +50,10 @@ const jackDB = (config = {}) => {
       .then(snapshot => snapshot.val())
   );
 
-  const random = () => (
-    totalJacksRef.once('value')
-      .then(snapshot => snapshot.val())
-      .then(total => get(Math.floor(Math.random() * total) + 1))
+  const random = (filterOptions = {}) => (
+    all()
+      .then(jacks => filter(jacks, filterOptions))
+      .then(jacks => jacks[Math.floor(Math.random() * jacks.length)])
   );
 
   const upvote = (id, user) => (
