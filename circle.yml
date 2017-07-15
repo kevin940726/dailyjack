@@ -23,6 +23,10 @@ dependencies:
   cache_directories:
     - ~/.cache/yarn
 
+test:
+  override:
+    - lerna run test
+
 deployment:
   master:
     branch: master
