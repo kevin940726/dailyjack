@@ -14,7 +14,6 @@ general:
 
 dependencies:
   pre:
-    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
     - echo "{ \"FIREBASE_PROJECT_ID\":\"$FIREBASE_PROJECT_ID\", \"FIREBASE_CLIENT_EMAIL\":\"$FIREBASE_CLIENT_EMAIL\", \"FIREBASE_PRIVATE_KEY\":\"$FIREBASE_PRIVATE_KEY\" }" > ./.env.json
   override:
     - yarn global add lerna
@@ -37,4 +36,3 @@ deployment:
     tag: /[\w-]+@[0-9]+(\.[0-9]+)*/
     commands:
       - lerna run deploy:prod -- --use-local-dependencies
-      - npm publish
