@@ -32,7 +32,7 @@ const slackMessageBuilder = (...jacks) => ({
     callback_id: jack.id,
     actions: [
       {
-        name: 'rate',
+        name: jack.isSpecial ? 'plus1' : 'rate',
         text: [':thumbsup:', Object.keys(jack.ratedUsers || {}).length]
           .filter(Boolean)
           .join(' '),
@@ -40,7 +40,7 @@ const slackMessageBuilder = (...jacks) => ({
         value: '1',
       },
     ],
-    footer: `dailyjack #${jack.id} @${jack.author}`,
+    footer: `dailyjack #${jack.id} ${jack.author ? `@${jack.author}` : ''}`,
     footer_icon: 'http://i.imgur.com/19yCcOJ.jpg',
   })),
 });
@@ -77,6 +77,19 @@ api.post('/slack-button', (request) => {
             .filter(Boolean)
             .join(' ');
         });
+    } else if (action.name === 'plus1') {
+      const special = jack.actions[index];
+      const users = special.text.split(' ');
+      const userIndex = users.indexOf(`@${user.name}`);
+
+      if (userIndex < 0) {
+        users.push(` @${user.name}`);
+      } else {
+        users.splice(userIndex, 1);
+      }
+
+      special.text = users.join(' ');
+      return Promise.resolve();
     }
 
     return Promise.resolve();
