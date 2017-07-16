@@ -46,7 +46,8 @@
     "contents": [
       "向 Jack 道歉"
     ],
-    "author": "scars"
+    "author": "scars",
+    "isLimited": true
   },
   {
     "id": "7",
@@ -80,7 +81,8 @@
       "向主管道謝",
       "感謝你讓我們有這份榮幸認識了 Jack"
     ],
-    "author": "scars"
+    "author": "scars",
+    "isLimited": true
   },
   {
     "id": "11",
@@ -114,7 +116,8 @@
     "contents": [
       "是公司要解散"
     ],
-    "author": "scars"
+    "author": "scars",
+    "isLimited": true
   },
   {
     "id": "15",
@@ -130,7 +133,8 @@
     "contents": [
       "只是老闆一直到現在還沒辦法鼓起勇氣告訴他"
     ],
-    "author": "hsuan"
+    "author": "hsuan",
+    "isLimited": true
   },
   {
     "id": "17",
@@ -189,5 +193,13 @@
       "Jack 的題目是保齡球"
     ],
     "author": "kaihao"
+  },
+  {
+    "id": "24",
+    "title": ":tada: Jack 想請大家喝飲料！ :tada:",
+    "contents": [
+      "在下面按讚即可 +1！"
+    ],
+    "isSpecial": true
   }
 ]
