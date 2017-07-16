@@ -22,8 +22,8 @@ const jackDB = (config = {}) => {
       .set({
         id: jack.id,
         title: jack.title,
-        contents: jack.contents,
-        author: jack.author,
+        contents: jack.contents || [],
+        author: jack.author || null,
         createdTime: Date.now(),
         isLimited: Boolean(jack.isLimited),
         isSpecial: Boolean(jack.isSpecial),
