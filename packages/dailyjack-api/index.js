@@ -78,17 +78,23 @@ api.post('/slack-button', (request) => {
             .join(' ');
         });
     } else if (action.name === 'plus1') {
-      const special = jack.actions[index];
-      const users = special.text.split(' ');
-      const userIndex = users.indexOf(`@${user.name}`);
+      const contents = jack.text.split('\n');
+      const lastContent = contents[contents.length - 1];
 
-      if (userIndex < 0) {
-        users.push(` @${user.name}`);
+      if (lastContent && lastContent.startsWith('@')) {
+        const users = lastContent.split(' ');
+        const userIndex = users.indexOf(`@${user.name}`);
+        if (userIndex < 0) {
+          users.push(`@${user.name}`);
+        } else {
+          users.splice(userIndex, 1);
+        }
+
+        jack.text = [...contents.slice(0, -1), users.join(' ')].join('\n');
       } else {
-        users.splice(userIndex, 1);
+        jack.text = [...contents, `@${user.name}`].join('\n');
       }
 
-      special.text = users.join(' ');
       return Promise.resolve();
     }
 

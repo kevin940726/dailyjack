@@ -32,8 +32,6 @@ deployment:
     commands:
       - lerna run deploy:dev -- --use-local-dependencies
   prod:
-    branch: master
     tag: /[\w-]+@[0-9]+(\.[0-9]+)*/
-    owner: kevin940726
     commands:
       - lerna run deploy:prod -- --use-local-dependencies
