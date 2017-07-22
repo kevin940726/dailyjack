@@ -45,26 +45,39 @@ const slackMessageBuilder = (...jacks) => ({
   })),
 });
 
-api.post('/slack', (request) => {
-  const body = request.post;
-  const filterOptions = {};
+const updateUser = user => dailyjack.updateUser(user);
 
-  if (body.channel_name.indexOf('all-') === 0) {
+api.post('/slack', (request) => {
+  const { user_id, user_name, channel_name, text } = request.post;
+  const filterOptions = {};
+  const id = parseInt(text, 10);
+  const isRandom = !Number.isInteger(id);
+
+  if (channel_name.indexOf('all-') === 0) {
     filterOptions.shouldExcludeLimited = true;
   }
 
-  const id = parseInt(body.text, 10);
-  if (Number.isInteger(id)) {
-    return dailyjack.get(id)
-      .then(slackMessageBuilder);
+  {
+    const userObject = {
+      id: user_id,
+      name: user_name,
+    };
+
+    if (isRandom) {
+      userObject.lastPayRespect = Date.now();
+    }
+
+    updateUser(userObject);
   }
 
-  return dailyjack.random(filterOptions)
+  return (isRandom ? dailyjack.random(filterOptions) : dailyjack.get(id))
     .then(slackMessageBuilder);
 });
 
 api.post('/slack-button', (request) => {
   const { callback_id, actions, user, original_message } = JSON.parse(request.post.payload);
+
+  updateUser(user);
 
   const jack = original_message.attachments.find(attachment => attachment.callback_id === callback_id);
 

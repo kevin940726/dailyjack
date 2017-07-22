@@ -15,6 +15,7 @@ const jackDB = (config = {}) => {
   const db = admin.database();
   const jacksRef = db.ref('jacks');
   const totalJacksRef = db.ref('totalJacks');
+  const usersRef = db.ref('users');
 
   const insert = jack => (
     jacksRef
@@ -87,6 +88,22 @@ const jackDB = (config = {}) => {
       )
   );
 
+  const setUser = user => (
+    usersRef.child(user.name)
+      .set(user)
+  );
+
+  const updateUser = user => (
+    usersRef.child(user.name)
+      .update(user)
+  );
+
+  const getUser = userName => (
+    usersRef.child(userName)
+      .once('value')
+      .then(snapshot => snapshot.val())
+  );
+
   const exit = () => {
     db.goOffline();
     app.delete();
@@ -102,6 +119,9 @@ const jackDB = (config = {}) => {
     downvote,
     togglevote,
     getRate,
+    setUser,
+    updateUser,
+    getUser,
   };
 };
 
