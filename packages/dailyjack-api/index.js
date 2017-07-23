@@ -64,7 +64,7 @@ api.post('/slack', (request) => {
       });
 
       if (isRandom) {
-        if (!isSameDay(new Date(me.lastPayRespect), new Date())) {
+        if (!userObject.lastPayRespect || !isSameDay(new Date(userObject.lastPayRespect), new Date())) {
           userObject.DJD = (userObject.DJD || 0) + 1;
         }
 
