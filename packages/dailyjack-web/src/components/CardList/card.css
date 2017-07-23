@@ -1,0 +1,37 @@
+.c-card {
+  position: relative;
+  flex: 0 0 280px;
+  margin: 10px;
+  padding: 50px 10px;
+  font-size: 14px;
+  color: #020202;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: -1px 0 0 0 #FFFFFF, 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.c-card-header {
+  position: relative;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.c-card-comment {
+  margin-bottom: 10px;
+}
+
+.c-card-author {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  color: #6F6777;
+  font-weight: 500;
+}
+
+.c-card-content {
+  color: #6F6777;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
