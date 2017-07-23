@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 568px;
+  min-height: 350px;
+  padding: 40px 0px;
   border-radius: 4px;
   background-color: #FFFFFF;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
