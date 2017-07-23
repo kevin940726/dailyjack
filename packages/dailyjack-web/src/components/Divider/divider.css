@@ -1,0 +1,7 @@
+.c-divider {
+  position: absolute;
+  bottom: 21px;
+  width: 100%;
+  border-bottom: 1px solid #D2D2D7;
+  box-sizing: content-box;
+}

@@ -1,0 +1,26 @@
+:root {
+  --nav-height: 40px;
+}
+
+.c-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: right;
+  height: var(--nav-height);
+  background: #222
+}
+
+.c-nav-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  height: var(--nav-height);
+  padding: 0 20px;
+  line-height: var(--nav-height);
+}
+
+.c-menu-link.active {
+  background: rgba(255, 255, 255, .2);
+}
