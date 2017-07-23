@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 const ApiBuilder = require('claudia-api-builder');
 const dailyjackCore = require('dailyjack-core').default;
+const { isSameDay } = require('./utils');
 
 const {
   FIREBASE_PROJECT_ID,
@@ -45,8 +46,6 @@ const slackMessageBuilder = (...jacks) => ({
   })),
 });
 
-const updateUser = user => dailyjack.updateUser(user);
-
 api.post('/slack', (request) => {
   const { user_id, user_name, channel_name, text } = request.post;
   const filterOptions = {};
@@ -57,27 +56,31 @@ api.post('/slack', (request) => {
     filterOptions.shouldExcludeLimited = true;
   }
 
-  {
-    const userObject = {
-      id: user_id,
-      name: user_name,
-    };
+  return dailyjack.getUser(user_name)
+    .then((me) => {
+      const userObject = Object.assign({}, me || {}, {
+        id: user_id,
+        name: user_name,
+      });
 
-    if (isRandom) {
-      userObject.lastPayRespect = Date.now();
-    }
+      if (isRandom) {
+        if (!isSameDay(new Date(me.lastPayRespect), new Date())) {
+          userObject.DJD = (userObject.DJD || 0) + 1;
+        }
 
-    updateUser(userObject);
-  }
+        userObject.lastPayRespect = Date.now();
+      }
 
-  return (isRandom ? dailyjack.random(filterOptions) : dailyjack.get(id))
+      return dailyjack.updateUser(userObject);
+    })
+    .then(() => (isRandom ? dailyjack.random(filterOptions) : dailyjack.get(id)))
     .then(slackMessageBuilder);
 });
 
 api.post('/slack-button', (request) => {
   const { callback_id, actions, user, original_message } = JSON.parse(request.post.payload);
 
-  updateUser(user);
+  dailyjack.updateUser(user);
 
   const jack = original_message.attachments.find(attachment => attachment.callback_id === callback_id);
 
