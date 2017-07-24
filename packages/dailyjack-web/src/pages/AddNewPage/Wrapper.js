@@ -1,4 +1,7 @@
-.l-page-add-new {
+import styled from 'emotion/react';
+import Section from '../../components/Section';
+
+const Wrapper = styled(Section)`
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -8,9 +11,10 @@
   border-radius: 4px;
   background-color: #FFFFFF;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-@media screen and (max-width: 640px) {
-  .l-page.l-page-add-new {
+
+  @media screen and (max-width: 640px) {
     width: 300px;
   }
-}
+`;
+
+export default Wrapper;

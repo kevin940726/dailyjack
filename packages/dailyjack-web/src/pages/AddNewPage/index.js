@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import InputItem from '../../components/InputItem';
 import Button from '../../components/Button';
-import './addNewPage.css';
+import Wrapper from './Wrapper';
 
 class AddNewPage extends Component {
   constructor(props) {
@@ -73,7 +73,7 @@ class AddNewPage extends Component {
   render() {
     const { title, content, author, isChanging } = this.state;
     return (
-      <section className="l-page l-page-add-new">
+      <Wrapper>
         <InputItem
           label="標題"
           field="title"
@@ -96,7 +96,7 @@ class AddNewPage extends Component {
           isChangeing={isChanging.author}
         />
         <Button label="新增" handleClick={this.handleClick} />
-      </section>
+      </Wrapper>
     );
   }
 }

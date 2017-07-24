@@ -1,0 +1,21 @@
+.css-Wrapper-1y686vs { position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-height: 350px;
+  padding: 40px 0px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+@media screen and (max-width: 640px) {
+ .css-Wrapper-1y686vs { width: 300px; } }

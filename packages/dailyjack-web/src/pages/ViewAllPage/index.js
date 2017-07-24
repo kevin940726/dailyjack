@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import Card from '../../components/CardList';
-import './viewAllPage.css';
+import Wrapper from './Wrapper';
 
 class ViewAllPage extends Component {
   state = {
@@ -24,19 +24,17 @@ class ViewAllPage extends Component {
   render() {
     const { jacks = [] } = this.state;
     return (
-      <section className="l-page l-page-view-all">
-        {
-          jacks.map((comment, index) => (
-            <Card
-              key={index}
-              author={comment.author}
-              contents={comment.contents}
-              title={comment.title}
-              id={index + 1}
-            />
-          ))
-        }
-      </section>
+      <Wrapper>
+        {jacks.map((comment, index) => (
+          <Card
+            key={index}
+            author={comment.author}
+            contents={comment.contents}
+            title={comment.title}
+            id={index + 1}
+          />
+        ))}
+      </Wrapper>
     );
   }
 }

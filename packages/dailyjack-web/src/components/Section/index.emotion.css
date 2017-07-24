@@ -1,0 +1,5 @@
+.css-Section-ob1ypv { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+  width: 640px;
+  margin: 0 auto; }
+@media screen and (max-width: 640px) {
+ .css-Section-ob1ypv { width: 320px; } }
