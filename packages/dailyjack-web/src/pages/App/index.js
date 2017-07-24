@@ -5,9 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 import firebase from 'firebase';
-import ViewAllPage from './pages/ViewAllPage';
-import AddNewPage from './pages/AddNewPage';
-import Nav from './components/Nav';
+import ViewAllPage from '../ViewAllPage';
+import AddNewPage from '../AddNewPage';
+import Nav from '../../components/Nav';
 import './App.css';
 
 const config = {
