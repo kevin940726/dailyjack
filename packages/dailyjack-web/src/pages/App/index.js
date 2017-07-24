@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import {
-  Redirect,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import styled from 'emotion/react';
+import { Switch, Route } from 'react-router-dom';
 import firebase from 'firebase';
+import Header, { HeaderTitle } from './Header';
+import Main from './Main';
 import ViewAllPage from '../ViewAllPage';
 import AddNewPage from '../AddNewPage';
 import Nav from '../../components/Nav';
-import './App.css';
 
 const config = {
   apiKey: 'AIzaSyDMv72eVWhuE5HhY-ahe6fiI6QV-fvxOQo',
@@ -20,9 +18,16 @@ const config = {
 };
 
 const pages = [
-  { path: '/view-all', label: 'View All', component: ViewAllPage },
-  { path: '/add-new', label: 'Add New', component: AddNewPage },
+  { path: '/', label: 'View All', component: ViewAllPage },
+  { path: '/add', label: 'Add New', component: AddNewPage },
 ];
+
+const Container = styled.div`
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #F5E6E8;
+`;
 
 class App extends Component {
   constructor(props) {
@@ -32,22 +37,24 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-container">
+      <Container>
         <Nav pages={pages} />
-        <header className="c-header">
-          <h1 className="c-header-title">DailyJack</h1>
-        </header>
-        <main id="main">
+        <Header>
+          <HeaderTitle>DailyJack</HeaderTitle>
+        </Header>
+        <Main>
           <Switch>
-            <Route path="/" exact>
-              <Redirect to="/view-all" />
-            </Route>
             {pages.map(page => (
-              <Route path={page.path} component={page.component} key={page.path} />
+              <Route
+                key={page.path}
+                exact
+                path={page.path}
+                render={props => <page.component {...props} />}
+              />
             ))}
           </Switch>
-        </main>
-      </div>
+        </Main>
+      </Container>
     );
   }
 }

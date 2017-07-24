@@ -1,13 +1,31 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './nav.css';
+import styled from 'emotion/react';
+import NavLink from './NavLink';
+import { NAV_HEIGHT, ACTIVE_CLASS_NAME } from './constants';
+
+const NavWrapper = styled.nav`
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: right;
+  height: ${NAV_HEIGHT}px;
+  background: #222
+`;
 
 const Nav = ({ pages }) => (
-  <nav className="c-nav">
+  <NavWrapper>
     {pages.map(page => (
-      <NavLink className="c-nav-link" to={page.path} key={page.path} activeClassName="active">{page.label}</NavLink>
+      <NavLink
+        key={page.path}
+        exact
+        to={page.path}
+        activeClassName={ACTIVE_CLASS_NAME}
+      >
+        {page.label}
+      </NavLink>
     ))}
-  </nav>
+  </NavWrapper>
 );
 
 export default Nav;
