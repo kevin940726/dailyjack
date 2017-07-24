@@ -1,0 +1,22 @@
+{
+  "name": "dailyjack-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "emotion": "^6.0.3",
+    "firebase": "^4.1.3",
+    "react": "file:../react",
+    "react-dom": "file:../react-dom",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-app-rewired": "^1.0.11"
+  }
+}

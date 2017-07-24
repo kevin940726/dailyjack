@@ -1,0 +1,38 @@
+.c-input-item {
+  position: relative;
+  margin: 15px 0;
+  width: 280px;
+  height: 66px;
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.c-input-text {
+  position: relative;
+  top: 15px;
+  padding: 0px;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #28232D;
+  box-sizing: border-box;
+}
+
+.c-input-label {
+  position: absolute;
+  top: 15px;
+  line-height: 24px;
+  z-index: 1;
+  letter-spacing: 1px;
+  pointer-events: none;
+  user-select: none;
+  color: #A9A4B0;
+  transition: all 0.45s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+
+.c-input-label--uppper{
+  position: absolute;
+  top: -10px;
+  font-size: 12px;
+}

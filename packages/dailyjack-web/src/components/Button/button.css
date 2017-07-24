@@ -1,0 +1,13 @@
+.c-btn {
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  padding: 12px 18px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #28232D;
+  color: #FFFCF9;
+  box-sizing: border-box;
+  outline: none;
+}
