@@ -14,7 +14,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "postbuild": "cp _redirects build/_redirects",
-    "test": "react-app-rewired test --env=jsdom",
+    "test": "echo 'no tests yet'",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
