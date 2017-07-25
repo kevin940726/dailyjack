@@ -201,5 +201,30 @@
       "在下面按讚即可 +1！"
     ],
     "isSpecial": true
+  },
+  {
+    "id": "25",
+    "title": "請立即表達對 Jack 的尊敬",
+    "contents": [
+      "在下面按讚即可"
+    ],
+    "isSpecial": true,
+    "author": "scars"
+  },
+  {
+    "id": "26",
+    "title": "Jack 可以直接讀 *.min.js",
+    "contents": [
+      "當然也可以直接在 *.min.js 裡面 coding"
+    ],
+    "author": "scars"
+  },
+  {
+    "id": "27",
+    "title": "Jack 帶出來的工程師都很優秀",
+    "contents": [
+      "也就是部門全部的人，當然也包含了主管"
+    ],
+    "author": "scars"
   }
 ]
