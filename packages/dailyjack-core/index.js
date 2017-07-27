@@ -1,7 +1,7 @@
 const admin = require('firebase-admin');
 
-// const DATABASE_URL = process.env.DATABASE_URL || 'https://dailyjack-8a930.firebaseio.com';
-const DATABASE_URL = 'https://dailyjack-d2fa0.firebaseio.com';
+const DATABASE_URL = process.env.DATABASE_URL || 'https://dailyjack-8a930.firebaseio.com';
+// const DATABASE_URL = 'https://dailyjack-d2fa0.firebaseio.com';
 
 const jackDB = (config = {}) => {
   const app = admin.initializeApp({
