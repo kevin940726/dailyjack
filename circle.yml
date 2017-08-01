@@ -14,7 +14,7 @@ general:
 
 dependencies:
   pre:
-    - echo "{ \"FIREBASE_PROJECT_ID\":\"$FIREBASE_PROJECT_ID\", \"FIREBASE_CLIENT_EMAIL\":\"$FIREBASE_CLIENT_EMAIL\", \"FIREBASE_PRIVATE_KEY\":\"$FIREBASE_PRIVATE_KEY\" }" > ./.env.json
+    - echo "{ \"FIREBASE_PROJECT_ID\":\"$FIREBASE_PROJECT_ID\", \"FIREBASE_CLIENT_EMAIL\":\"$FIREBASE_CLIENT_EMAIL\", \"FIREBASE_PRIVATE_KEY\":\"$FIREBASE_PRIVATE_KEY\", \"SLACK_TOKEN\":\"$SLACK_TOKEN\" }" > ./.env.json
   override:
     - yarn global add lerna
     - yarn
