@@ -12,7 +12,7 @@ const USER_WHITE_LIST = [
 const slackMessageBuilder = orders => ({
   attachments: [
     {
-      title: `${new Date().getMonth() + 1}/${new Date().getDate()} orders report`,
+      title: `${getToday().month() + 1}/${getToday().date()} orders report`,
       color: 'good',
       fields: orders.map(order => ({
         title: order.name,
@@ -52,7 +52,7 @@ const group = api => api.post('/group', (request) => {
 
   const ordersPromise = slackAPI('channels.history', {
     channel: ALL_LUNCH_CHANNEL_ID,
-    oldest: getToday() / 1000,
+    oldest: getToday().d.getTime() / 1000,
   })
     .then(({ messages }) => messages)
     .then(messages => messages.filter(message => (

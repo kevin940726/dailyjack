@@ -749,6 +749,10 @@ source-map@~0.2.0:
   dependencies:
     amdefine ">=0.0.4"
 
+spacetime@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/spacetime/-/spacetime-1.0.7.tgz#b4585d334f9ae45dc292e29d9498b7017cd96e56"
+
 stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
