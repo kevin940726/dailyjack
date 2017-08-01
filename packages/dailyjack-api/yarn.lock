@@ -183,8 +183,9 @@ crypto-browserify@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/crypto-browserify/-/crypto-browserify-1.0.9.tgz#cc5449685dfb85eb11c9828acc7cb87ab5bbfcc0"
 
-"dailyjack-core@file:../dailyjack-core":
-  version "1.1.1"
+dailyjack-core@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/dailyjack-core/-/dailyjack-core-1.3.0.tgz#caa11d9f945544add624a5af12f2b6c1994c1cc2"
   dependencies:
     dotenv "^4.0.0"
     firebase-admin "^5.0.0"
@@ -198,6 +199,10 @@ debug@2:
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
     ms "2.0.0"
+
+decode-uri-component@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
 
 deep-is@~0.1.3:
   version "0.1.3"
@@ -548,6 +553,10 @@ normalize-path@^2.0.0:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
+object-assign@^4.1.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+
 oh-no-i-insist@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/oh-no-i-insist/-/oh-no-i-insist-1.1.1.tgz#af6f12e2d43366839bae45f8c870b976a11eee35"
@@ -654,6 +663,14 @@ punycode@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
+query-string@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.0.0.tgz#fbdf7004b4d2aff792f9871981b7a2794f555947"
+  dependencies:
+    decode-uri-component "^0.2.0"
+    object-assign "^4.1.0"
+    strict-uri-encode "^1.0.0"
+
 querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
@@ -735,6 +752,10 @@ source-map@~0.2.0:
 stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
+
+strict-uri-encode@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
 
 string_decoder@~0.10.x:
   version "0.10.31"

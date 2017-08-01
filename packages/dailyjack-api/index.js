@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 const ApiBuilder = require('claudia-api-builder');
 const dailyjackCore = require('dailyjack-core').default;
+const dailyorder = require('./dailyorder');
 const { isSameDay } = require('./utils');
 
 const {
@@ -16,6 +17,8 @@ const dailyjack = dailyjackCore({
 });
 
 const api = new ApiBuilder();
+
+dailyorder(api);
 
 api.get('/', () => dailyjack.all());
 
