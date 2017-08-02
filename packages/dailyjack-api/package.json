@@ -1,7 +1,7 @@
 {
   "name": "dailyjack-api",
   "private": true,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "dailyjack api",
   "main": "index.js",
   "url": "https://mpeoxufygg.execute-api.ap-northeast-1.amazonaws.com/latest/",
