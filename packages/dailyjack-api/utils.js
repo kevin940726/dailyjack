@@ -7,13 +7,11 @@ exports.isSameDay = (date1, date2 = new Date()) => (
 );
 
 exports.getToday = () => {
-  const now = new Date();
-  now.setHours(0);
-  now.setMinutes(0);
-  now.setSeconds(0);
-  now.setMilliseconds(0);
+  const now = spacetime(new Date(), 'Asia/Taipei');
+  now.hour(0);
+  now.minute(0);
+  now.second(0);
+  now.millisecond(0);
 
-  const today = spacetime(now.getTime(), 'Asia/Taipei');
-
-  return today;
+  return now;
 };
