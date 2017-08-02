@@ -10,13 +10,14 @@ const USER_WHITE_LIST = [
 ];
 
 const slackMessageBuilder = orders => ({
+  response_type: 'in_channel',
   attachments: [
     {
       title: `${getToday().month() + 1}/${getToday().date()} orders report`,
       color: 'good',
       fields: orders.map(order => ({
         title: order.name,
-        value: `:${order.emoji}: (${order.total}): ${order.users.join(' ')}`,
+        value: `:${order.emoji}: (${order.total}): ${order.users.join(', ')}`,
       })),
     },
   ],
@@ -78,7 +79,7 @@ const group = api => api.post('/group', (request) => {
 
   return Promise.all([usersPromise, ordersPromise])
     .then(([users, orders]) => orders.map(order => Object.assign({}, order, {
-      users: order.users.map(user => users[user]),
+      users: order.users.map(user => `@${users[user]}`),
     })))
     .then(slackMessageBuilder);
 });
