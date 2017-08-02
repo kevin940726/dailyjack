@@ -15,7 +15,7 @@ const slackMessageBuilder = orders => ({
     {
       title: `${getToday().month() + 1}/${getToday().date()} orders report`,
       color: 'good',
-      fields: orders.map(order => ({
+      fields: orders.reverse().map(order => ({
         title: order.name,
         value: `:${order.emoji}: (${order.total}): ${order.users.join(', ')}`,
       })),
